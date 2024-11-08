@@ -1,54 +1,14 @@
 import React from 'react'
+import Narbar from '../Navbar-folder/Narbar'
 
 const Resume = () => {
     return (
         <>
             <main className="flex-shrink-0">
-                {/* Navigation*/}
-                <nav className="navbar navbar-expand-lg navbar-light bg-white py-3">
-                    <div className="container px-5">
-                        <a className="navbar-brand" href="index.html">
-                            <span className="fw-bolder text-primary fs-2">Tescode</span>
-                        </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon" />
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="index.html">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="resume.html">
-                                        Resume
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="projects.html">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="contact.html">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                {/* Page Content*/}
-                <div className="container px-5 my-5">
+                <div>
+                    <Narbar/>
+                </div>                
+                <div className="container px-5" style={{marginTop:"85x "}}>
                     <div className="text-center mb-5">
                         <h1 className="display-5 fw-bolder mb-0">
                             <span className="text-gradient d-inline">Resume</span>
@@ -62,7 +22,7 @@ const Resume = () => {
                                     <h2 className="text-primary fw-bolder mb-0">Experience</h2>
                                     {/* Download resume button*/}
                                     {/* Note: Set the link href target to a PDF file within your project*/}
-                                    <a className="btn btn-primary px-4 py-3" href="#!">
+                                    <a className="btn btn-primary px-4 py-3">
                                         <div className="d-inline-block bi bi-download me-2" />
                                         Download Resume
                                     </a>
@@ -81,7 +41,7 @@ const Resume = () => {
                                                     <div className="small text-muted">Ogbomosho, Nigeria </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
                                                     As a Web Developer at SQI College of ICT, I design, develop, and maintain responsive websites and web applications. I utilize front-end and back-end technologies to create efficient, user-friendly solutions that meet both internal and client needs.
                                                 </div>
@@ -103,7 +63,7 @@ const Resume = () => {
                                                     <div className="small text-muted">Ogbomosho, Nigeria</div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
                                                     During my SIWES internship at LAUTECH, I gained hands-on experience in web development, contributing to various projects. I collaborated with teams to design and implement user-friendly websites and applications. This role enhanced my skills in front-end and back-end development, as well as problem-solving and teamwork in a professional setting.
                                                 </div>
@@ -134,7 +94,7 @@ const Resume = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
                                                     SQI College of ICT, located in Ogbomosho, Nigeria, is a leading institution offering quality education in Information and Communication Technology. It equips students with practical skills in software development, web development, and networking, preparing them for successful careers in the rapidly growing tech industry. The college fosters innovation and technical expertise in a dynamic learning environment.
                                                 </div>
@@ -161,7 +121,7 @@ const Resume = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8">
+                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
                                                     The Ladoke Akintola University of Technology (LAUTECH) ICT Center advances technology and digital learning by providing campus-wide digital solutions, ICT training, and managing information systems. It supports e-learning, research, and skill development in software, networking, and cybersecurity, equipping students and staff for success in a technology-driven world.
                                                 </div>

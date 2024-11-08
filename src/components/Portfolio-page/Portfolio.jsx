@@ -1,6 +1,7 @@
 import React from 'react'
 import Portfolioimage from '../../Images/portfolio.png'
 import { useNavigate } from 'react-router-dom'
+import Narbar from '../Navbar-folder/Narbar'
 
 const Portfolio = () => {
     const navigate = useNavigate()
@@ -11,56 +12,14 @@ const Portfolio = () => {
     return (
         <>
             <main className="flex-shrink-0">
-                {/* Navigation*/}
-                <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
-                    <div className="container px-5">
-                        <a className="navbar-brand" href="index.html">
-                            <span className="fw-bolder text-primary fs-2">Tescode</span>
-                        </a>
-                        <button
-                            className="navbar-toggler"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent"
-                            aria-controls="navbarSupportedContent"
-                            aria-expanded="false"
-                            aria-label="Toggle navigation"
-                        >
-                            <span className="navbar-toggler-icon" />
-                        </button>
-                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                                <li className="nav-item">
-                                    <a className="nav-link" href="index.html">
-                                        Home
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="resume.html">
-                                        Resume
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="projects.html">
-                                        Projects
-                                    </a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="nav-link" href="contact.html">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-                {/* Header*/}
+                <div>
+                    <Narbar />
+                </div>
                 <header className="py-5">
                     <div className="container px-5 pb-5">
                         <div className="row gx-5 align-items-center">
                             <div className="col-xxl-5">
-                                {/* Header text content*/}
-                                <div className="text-center text-xxl-start mt-5">
+                                <div className="text-center text-xxl-start" style={{marginTop:"80px"}}>
                                     <div className="badge bg-gradient-primary-to-secondary text-white mb-4">
                                         <div className="text-uppercase">
 
@@ -70,10 +29,10 @@ const Portfolio = () => {
                                     <div className="fs-3 fw-light text-muted">
                                         I can help your business to
                                     </div>
-                                    <h1 className="display-3 fw-bolder mb-5">
+                                    <h1 className="display-4 fw-bolder mb-5">
                                         <span className="text-gradient d-inline">
                                             Get online and grow quickly
-                                            with my web development expertise.
+                                            with my web development expertise
                                         </span>
                                     </h1>
                                     <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
@@ -93,18 +52,15 @@ const Portfolio = () => {
                                 </div>
                             </div>
                             <div className="col-xxl-7">
-                                {/* Header profile picture*/}
                                 <div className="d-flex justify-content-center mt-5 mt-xxl-0">
                                     <div className="profile bg-gradient-primary-to-secondary">
-                                        {/* TIP: For best results, use a photo with a transparent background like the demo example below*/}
-                                        {/* Watch a tutorial on how to do this on YouTube (link)*/}
+
                                         <img
                                             className="profile-img"
                                             src={Portfolioimage}
                                             alt="..."
                                         />
                                         <div className="dots-1">
-                                            {/* SVG Dots*/}
                                             <svg
                                                 version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -138,10 +94,8 @@ const Portfolio = () => {
                                                     <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z" />
                                                 </g>
                                             </svg>
-                                            {/* END of SVG dots*/}
                                         </div>
                                         <div className="dots-2">
-                                            {/* SVG Dots*/}
                                             <svg
                                                 version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -175,10 +129,8 @@ const Portfolio = () => {
                                                     <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z" />
                                                 </g>
                                             </svg>
-                                            {/* END of SVG dots*/}
                                         </div>
                                         <div className="dots-3">
-                                            {/* SVG Dots*/}
                                             <svg
                                                 version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -212,10 +164,8 @@ const Portfolio = () => {
                                                     <path d="M1507.7,1268.6c-105-35-200-141-222-248c-43-206,163-412,369-369c155,32,275,190,260,339c-11,105-90,213-190,262        C1663.7,1281.6,1569.7,1288.6,1507.7,1268.6z" />
                                                 </g>
                                             </svg>
-                                            {/* END of SVG dots*/}
                                         </div>
                                         <div className="dots-4">
-                                            {/* SVG Dots*/}
                                             <svg
                                                 version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg"
