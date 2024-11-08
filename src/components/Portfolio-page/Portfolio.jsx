@@ -44,7 +44,7 @@ const Portfolio = () => {
                                         </a>
                                         <a
                                             className="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                                            href="projects.html"
+                                            onClick={ProjectsBtn}
                                         >
                                             Projects
                                         </a>

@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import Portfolio from './components/Portfolio-page/Portfolio'
 import Notfound from './components/Notfound-Folder/Notfound'
 import Resume from './components/Resume-Folder/Resume'
+import Project from './components/Project-folder/Project'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Portfolio/>}/>
         <Route path='/resume' element={<Resume/>}/>
+        <Route path='/project' element={<Project/>}/>
         <Route path='*' element={<Notfound/>}/>
       </Routes>
     </>
