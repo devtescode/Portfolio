@@ -133,6 +133,115 @@ const PortfolioFilter = () => {
             </div>
           </div>
         </div>
+
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div className="portfolio-wrap">
+            <img src={Portfolioimage} className="img-fluid" alt="Game" />
+            <div className="portfolio-info">
+              <h4>tescodegame.netlify.app</h4>
+              <p>Game</p>
+              <div className="portfolio-links">
+                <a href="./tictakgame.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 2">
+                  <i className="bx bx-plus" />
+                </a>
+                <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+                  <i className="bx bx-link" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
