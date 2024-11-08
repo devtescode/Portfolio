@@ -9,6 +9,9 @@ const Portfolio = () => {
     const ResumeBtn = () => {
         navigate("/resume")
     }
+    const ProjectsBtn = ()=>{
+        navigate("/project")
+    }
     return (
         <>
             <main className="flex-shrink-0">

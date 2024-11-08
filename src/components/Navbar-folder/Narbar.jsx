@@ -9,7 +9,13 @@ const Narbar = () => {
     const ResumeBtn = ()=>{
         navigate("/resume")
     }
-    return (
+    const ContactBtn = ()=>{
+        navigate("/contact")
+    }
+    const ProjectBtn = ()=>{
+        navigate("/project")
+    }
+    return (        
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
                 <div className="container px-5">
@@ -40,12 +46,12 @@ const Narbar = () => {
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"  style={{cursor:"pointer"}}>
+                                <a className="nav-link"  style={{cursor:"pointer"}} onClick={ProjectBtn}>
                                     Projects
                                 </a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link"  style={{cursor:"pointer"}}>
+                                <a className="nav-link"  style={{cursor:"pointer"}} onClick={ContactBtn}>
                                     Contact
                                 </a>
                             </li>
