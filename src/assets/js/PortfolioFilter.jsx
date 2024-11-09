@@ -3,7 +3,10 @@ import Isotope from 'isotope-layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Portfolioimage from '../../Images/portfolio.png';
+import Ecommerce from '../../Images/airpord.png'
+import Bankingapp from '../../Images/bakingapp.png'
 const PortfolioFilter = () => {
+
   const isotope = useRef(null);
   const [activeFilter, setActiveFilter] = useState('*');
 
@@ -40,6 +43,10 @@ const PortfolioFilter = () => {
   };
 
   return (
+
+
+    
+
     <div className="portfolio-filter">
       <div className="row">
         <div
@@ -75,18 +82,20 @@ const PortfolioFilter = () => {
           </ul>
         </div>
       </div>
+     
 
-      <div className="portfolio-container row">
+      <div className="portfolio-container row" data-aos="fade-up" data-aos-delay="200">
         {/* Portfolio item 1 */}
         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
           <div className="portfolio-wrap">
-            <img src={Portfolioimage} className="img-fluid" alt="E-commerce" />
+            <img src={Ecommerce} className="img-fluid" alt="E-commerce" />
             <div className="portfolio-info">
               <h4>E-commerce</h4>
               <p>App</p>
               <div className="portfolio-links">
-                <a href="./airpord.PNG" data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1">
-                  <i className="bx bx-plus" />
+                <a data-gallery="portfolioGallery" className="portfolio-lightbox" title="App 1">
+                  {/* <i className="bx bx-plus" /> */}
+                  <i className="ri-add-fill"></i>
                 </a>
                 <a href="portfolio-details.html" className="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
                   <i className="bx bx-link" />
@@ -99,7 +108,7 @@ const PortfolioFilter = () => {
         {/* Portfolio item 2 */}
         <div className="col-lg-4 col-md-6 portfolio-item filter-web">
           <div className="portfolio-wrap">
-            <img src={Portfolioimage} className="img-fluid" alt="Baking App" />
+            <img src={Bankingapp} className="img-fluid" alt="Baking App" />
             <div className="portfolio-info">
               <h4>fastpayapp.netlify.app</h4>
               <p>Baking App</p>
@@ -151,7 +160,7 @@ const PortfolioFilter = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="col-lg-4 col-md-6 portfolio-item filter-app">
           <div className="portfolio-wrap">
             <img src={Portfolioimage} className="img-fluid" alt="Game" />
