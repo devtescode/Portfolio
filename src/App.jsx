@@ -16,7 +16,6 @@ import History from './components/History-page/History'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
