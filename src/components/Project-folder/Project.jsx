@@ -7,7 +7,7 @@ import PortfolioFilter from '../../assets/js/PortfolioFilter'
 
 const Project = () => {
 
-  
+
 
     return (
         <>
@@ -27,13 +27,10 @@ const Project = () => {
                                 <div className="section-title">
                                     <h2>Portfolio</h2>
                                     <p>
-                                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-                                        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-                                        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-                                        sit in iste officiis commodi quidem hic quas.
+                                        A collection of my projects, showcasing expertise in frontend and backend development, UI/UX design, and progressive web apps. Each project highlights my dedication to quality, innovation, and effective problem-solving tailored to user needs
                                     </p>
                                 </div>
-                                <PortfolioFilter/>
+                                <PortfolioFilter />
                             </div>
                         </section>
 
@@ -57,7 +54,7 @@ const Project = () => {
                 </section>
             </main>
 
-            
+
 
         </>
     )
