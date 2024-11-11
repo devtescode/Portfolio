@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import "./PortfolioFliter.css"
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+
 const PortfolioFilter = () => {
   const [images, setImages] = useState([]);
-  const [filter, setFilter] = useState('New'); // Default to "New"
+  const [filter, setFilter] = useState('All'); // Default to "All"
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const response = await axios.get('http://localhost:4000/api/images');
-        // Check if response data is an array and has the expected structure
         if (Array.isArray(response.data)) {
           setImages(response.data);
         } else {
@@ -21,36 +22,73 @@ const PortfolioFilter = () => {
     fetchImages();
   }, []);
 
-  const filteredImages = Array.isArray(images)
-    ? images.filter(image => image.projectType === filter)
-    : [];
-
-
+  const filteredImages = filter === 'All'
+    ? images
+    : images.filter(image => image.projectType === filter);
 
   return (
-
-    <>
-
-
-
-      <div className='container'>
-        <h2>Uploaded Projects</h2>
-        <div className='filter-buttons'>
-          <button onClick={() => setFilter('New')}>New Projects</button>
-          <button onClick={() => setFilter('Old')}>Old Projects</button>
-        </div>
-        <div className='row'>
-          {filteredImages.map((image, index) => (
-            <div className='col-md-4' key={index}>
-              <img src={image.url} alt="Uploaded Project" className='img-fluid' />
-              <p>{image.projectName}</p>
-              <p><a href={image.deployLink}>Deployed Project</a></p>
-            </div>
-          ))}
+    <div className='container'>
+      <h2 className='text-center'>Explore Our Projects</h2>
+      
+      <div className='text-center my-4'>
+        <div className='btn-group'>
+          <button
+            className={`btn btn-outline-primary ${filter === 'All' ? 'active' : ''}`}
+            onClick={() => setFilter('All')}
+          >
+            All Projects
+          </button>
+          <button
+            className={`btn btn-outline-primary ${filter === 'New' ? 'active' : ''}`}
+            onClick={() => setFilter('New')}
+          >
+            New Projects
+          </button>
+          <button
+            className={`btn btn-outline-primary ${filter === 'Old' ? 'active' : ''}`}
+            onClick={() => setFilter('Old')}
+          >
+            Old Projects
+          </button>
         </div>
       </div>
-    </>
 
+      <div className='row'>
+        <div className='project-grid'>
+          {filteredImages.length === 0 ? (
+            <div className='col-12 text-center'>
+              <p>No projects to display.</p>
+            </div>
+          ) : (
+            filteredImages.map((image, index) => (
+              <div className='project-card' key={index}>
+                <div className='card shadow-lg border-0 rounded'>
+                  <img
+                    src={image.url}
+                    alt="Uploaded Project"
+                    className='card-img-top rounded-top' 
+                    style={{height:"100%"}}
+                  />
+                  <div className='card-body'>
+                    <h5 className='card-title text-truncate'>{image.projectName}</h5>
+                    <p className='card-text'>
+                      <a
+                        href={image.deployLink}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='btn btn-primary btn-sm'
+                      >
+                        View Deployed Project
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
+      </div>
+    </div>
   );
 };
 

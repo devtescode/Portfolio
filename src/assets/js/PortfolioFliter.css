@@ -1,0 +1,117 @@
+/* CSS for the PortfolioFilter component */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Create columns that automatically fill */
+  gap: 15px; /* Adjust gap between cards */
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensures that the card stretches to fill its container */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.card-text {
+  margin-top: auto;
+}
+
+
+/* Overall container animation for smooth transition */
+.container {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  /* Fade-in effect for content */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Simple transition for the filter buttons */
+  .btn-group button {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-group button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .btn-group button.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Add transition effect to the project images */
+  .project-card {
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.01); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Image hover effect */
+  .card-img-top {
+    transition: all 0.1s ease;
+  }
+  
+ 
+  
+  /* Style for card-body */
+  .card-body {
+    transition: all 0.1s ease;
+  }
+  
+  /* Smooth fade-in effect for card-body */
+  .card-body {
+    opacity: 0;
+    animation: fadeInCard 1s forwards;
+  }
+  
+  @keyframes fadeInCard {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Transition on the "View Deployed Project" button */
+  .card-text a {
+    transition: all 0.31 ease;
+  }
+  
+  .card-text a:hover {
+    background-color: #0056b3; /* Darker background on hover */
+    transform: scale(1.01); /* Slight zoom effect */
+  }
+  
