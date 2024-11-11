@@ -1,6 +1,7 @@
 import "./PortfolioFliter.css"
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { API_URLS } from "../../../utils/apiConfig";
 
 const PortfolioFilter = () => {
   const [images, setImages] = useState([]);
@@ -9,7 +10,7 @@ const PortfolioFilter = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/api/images');
+        const response = await axios.get(API_URLS.fetchimage);
         if (Array.isArray(response.data)) {
           setImages(response.data);
         } else {
