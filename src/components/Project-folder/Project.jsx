@@ -19,13 +19,13 @@ const Project = () => {
                     <div className="container px-5 mb-5" style={{ marginTop: "50px" }}>
                         <div className="text-center mb-5">
                             <h1 className="display-5 fw-bolder mb-0">
-                                <span className="text-gradient d-inline">Projects</span>
+                                {/* <span className="text-gradient d-inline">Projects</span> */}
                             </h1>
                         </div>
                         <section id="portfolio" className="portfolio section-bg">
                             <div className="container" data-aos="fade-up">
                                 <div className="section-title">
-                                    <h2>Portfolio</h2>
+                                    <h2>Projects</h2>
                                     <p>
                                         A collection of my projects, showcasing expertise in frontend and backend development, UI/UX design, and progressive web apps. Each project highlights my dedication to quality, innovation, and effective problem-solving tailored to user needs
                                     </p>

@@ -10,6 +10,9 @@ const Narbarheader = () => {
   const HomeBtn = () => {
         navigate("/admindb")
   }
+  const HistoryBtn = () => {
+        navigate("/history")
+  }
   return (
     <>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -29,6 +32,10 @@ const Narbarheader = () => {
 
               <li class="nav-item">
                 <a class="nav-link" style={{cursor:"pointer"}}>Settings</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" style={{cursor:"pointer"}} onClick={HistoryBtn}>History</a>
               </li>
 
               <li class="nav-item">

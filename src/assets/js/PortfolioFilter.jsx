@@ -28,7 +28,7 @@ const PortfolioFilter = () => {
 
   return (
     <div className='container'>
-      <h2 className='text-center'>Explore Our Projects</h2>
+      {/* <h2 className='text-center'>Explore Our Projects</h2> */}
       
       <div className='text-center my-4'>
         <div className='btn-group'>
