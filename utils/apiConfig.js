@@ -3,10 +3,11 @@ import { baseURL } from "../config";
 console.log('Base URL:', baseURL)
 
 export const API_URLS = {
-    // signin: `${baseURL}/useranimalinvest/signin`,
-    // signup: `${baseURL}/useranimalinvest/signup`,
-    // dashboard: `${baseURL}/useranimalinvest/dashboard`,
-    // getallinvest: `${baseURL}/useranimalinvest/getallinvest`,
-    adminlogin: `${baseURL}/portfolio/adminlogin`
-    
+    adminlogin: `${baseURL}/portfolio/login`,
+    getprojects:  `${baseURL}/api/projects`,
+    delectprojects: (projectId) =>  ` ${baseURL}/api/projects/${projectId}`,
+    editprojects: (editingProject) => `${baseURL}/api/projects/${editingProject._id}`
+
+    // `http://localhost:4000/api/projects/${editingProject._id}`
+   
 };  

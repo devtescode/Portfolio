@@ -3,6 +3,7 @@ import axios from 'axios';
 // import Swal from 'sweetalert2';
 import Narbarheader from '../Narbar-Header-folder/Narbarheader';
 import NarbarTop from '../Narbardesign/NarbarTop';
+import { API_URLS } from '../../../utils/apiConfig';
 
 const History = () => {
     const [projects, setProjects] = useState([]);
@@ -12,7 +13,7 @@ const History = () => {
     useEffect(() => {
         const fetchProjects = async () => {
             try {
-                const response = await axios.get('http://localhost:4000/api/projects');
+                const response = await axios.get(API_URLS.getprojects);
                 setProjects(response.data);
             } catch (error) {
                 console.error('Error fetching projects:', error);
@@ -34,7 +35,7 @@ const History = () => {
 
         if (result.isConfirmed) {
             try {
-                await axios.delete(`http://localhost:4000/api/projects/${projectId}`);
+                await axios.delete(API_URLS.delectprojects(projectId));
                 setProjects(projects.filter(project => project._id !== projectId));
                 Swal.fire('Deleted!', 'The project has been deleted.', 'success');
             } catch (error) {
@@ -61,7 +62,8 @@ const History = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:4000/api/projects/${editingProject._id}`, editingProject);
+            // `http://localhost:4000/api/projects/${editingProject._id}`
+            const response = await axios.put(API_URLS.editprojects(editingProject), editingProject);
             const updatedProjects = projects.map(project =>
                 project._id === editingProject._id ? response.data : project
             );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Narbar from '../Navbar-folder/Narbar';
+import { API_URLS } from '../../../utils/apiConfig';
 
 const AdminLogin = () => {
     const [email, setEmail] = useState('');
@@ -11,7 +12,8 @@ const AdminLogin = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/portfolio/login', { email, password });
+            // 'http://localhost:4000/portfolio/login'
+            const response = await axios.post(API_URLS.adminlogin , { email, password });
             localStorage.setItem('token', response.data.token); // Store token in localStorage
             setMessage(response.data.message);
             navigate("/admindb")
@@ -23,36 +25,6 @@ const AdminLogin = () => {
     return (
         <div>
             <h2>Admin Login</h2>
-            {/* <form onSubmit={handleLogin}>
-                <div>
-                    <label>Email:</label>
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <button type="submit">Login</button>
-            </form>
-            {message && <p>{message}</p>} */}
-
-
-
-
-
-
-
-
             <main className="flex-shrink-0">
                 <div>
                     <Narbar />
