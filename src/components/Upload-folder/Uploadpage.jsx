@@ -7,6 +7,7 @@ const Uploadpage = () => {
     const [projectName, setProjectName] = useState('');
     const [deployLink, setDeployLink] = useState('');
     const [file, setFile] = useState(null);
+    const [projectType, setProjectType] = useState('New'); // New state for project type
 
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
@@ -17,6 +18,7 @@ const Uploadpage = () => {
         formData.append('image', file); // 'image' is the key used in the backend route
         formData.append('projectName', projectName);
         formData.append('deployLink', deployLink);
+        formData.append('projectType', projectType); // Append project type to the form data
 
         try {
             const response = await axios.post('http://localhost:4000/api/upload', formData, {
@@ -25,7 +27,7 @@ const Uploadpage = () => {
                 },
             });
             console.log('Uploaded image URL:', response.data.imageUrl);
-            // You could store this image URL or display it in your new file page
+            // Handle success (e.g., reset the form or show a success message)
         } catch (error) {
             console.error('Error uploading image:', error);
         }
@@ -56,6 +58,14 @@ const Uploadpage = () => {
                     onChange={(e) => setDeployLink(e.target.value)}
                 />
                 <input type="file" className='form-control my-2' onChange={handleFileChange} />
+                <select
+                    className='form-control my-2'
+                    value={projectType}
+                    onChange={(e) => setProjectType(e.target.value)}
+                >
+                    <option value="New">New Project</option>
+                    <option value="Old">Old Project</option>
+                </select>
                 <button className='btn btn-success' onClick={handleUpload}>Upload</button>
             </div>
         </>
