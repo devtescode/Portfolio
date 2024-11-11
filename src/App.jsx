@@ -11,6 +11,7 @@ import Contact from './components/Contact-folder/Contact'
 import Adminlogin from './components/AdminLogin/Adminlogin'
 import AdminRegister from './components/Register/AdminRegister'
 import Admindashboard from './components/AdminDashboard/Admindashboard'
+import Uploadpage from './components/Upload-folder/Uploadpage'
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/adminlogin' element={<Adminlogin/>}/>
         <Route path='/adminregister' element={<AdminRegister/>}/>
         <Route path='/admindb' element={<Admindashboard/>}/>
+        <Route path='/upload' element={<Uploadpage/>}/>
         <Route path='*' element={<Notfound/>}/>
       </Routes>
     </>
