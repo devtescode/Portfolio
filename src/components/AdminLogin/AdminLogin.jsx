@@ -24,7 +24,7 @@ const AdminLogin = () => {
 
     return (
         <div>
-            <h2>Admin-Login</h2>
+            <h2>Admin Login</h2>
             <main className="flex-shrink-0">
                 <div>
                     <Narbar />
