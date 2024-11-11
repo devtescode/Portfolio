@@ -45,7 +45,7 @@ const Project = () => {
                             </h2>
                             <a
                                 className="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
-                                href="contact.html"
+                               
                             >
                                 Contact me
                             </a>

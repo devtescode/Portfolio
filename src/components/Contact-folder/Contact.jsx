@@ -10,7 +10,6 @@ const Contact = () => {
                 </div>
                 <section className="py-5">
                     <div className="container px-5">
-                        {/* Contact form*/}
                         <div className="bg-light rounded-4 py-5 px-4 px-md-5">
                             <div className="text-center mb-5">
                                 <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3">
@@ -21,15 +20,8 @@ const Contact = () => {
                             </div>
                             <div className="row gx-5 justify-content-center">
                                 <div className="col-lg-8 col-xl-6">
-                                    {/* * * * * * * * * * * * * * * **/}
-                                    {/* * * SB Forms Contact Form * **/}
-                                    {/* * * * * * * * * * * * * * * **/}
-                                    {/* This form is pre-integrated with SB Forms.*/}
-                                    {/* To make this form functional, sign up at*/}
-                                    {/* https://startbootstrap.com/solution/contact-forms*/}
-                                    {/* to get an API token!*/}
+                                    
                                     <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                        {/* Name input*/}
                                         <div className="form-floating mb-3">
                                             <input
                                                 className="form-control"
