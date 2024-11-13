@@ -15,6 +15,7 @@ const Narbarheader = () => {
   }
   const LogoutBtn = ()=>{
     navigate("/adminlogin")
+    localStorage.removeItem('token');
   }
   return (
     <>

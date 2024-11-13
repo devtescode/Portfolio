@@ -13,14 +13,24 @@ const AdminLogin = () => {
         e.preventDefault();
         try {
             // 'http://localhost:4000/portfolio/login'
-            const response = await axios.post(API_URLS.adminlogin , { email, password });
+            const response = await axios.post(API_URLS.adminlogin, { email, password });
             localStorage.setItem('token', response.data.token);
             setMessage(response.data.message);
-            alert(response.data.message)
+            // alert(response.data.message)
+            Swal.fire({
+                icon: "success",
+                title: "",
+                text: response.data.message,
+            });
             navigate("/admindb")
         } catch (error) {
             setMessage(error.response.data.message);
-            alert(error.response.data.message)
+            // alert(error.response.data.message)
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: error.response.data.message,
+            });
         }
     };
 
@@ -44,9 +54,9 @@ const AdminLogin = () => {
                                 <div className="col-lg-8 col-xl-6">
 
                                     <form onSubmit={handleLogin}>
-                                       
+
                                         <div className=" mb-3">
-                                            
+
                                             {/* <label>Email:</label> */}
                                             <input
                                                 className='form-control p-3'
@@ -64,7 +74,7 @@ const AdminLogin = () => {
                                                 type="password"
                                                 value={password}
                                                 placeholder='Password'
-                                                onChange={(e) => setPassword(e.target.value)}                                                
+                                                onChange={(e) => setPassword(e.target.value)}
                                             />
                                             {/* <label htmlFor="phone">Password</label> */}
                                         </div>
@@ -78,7 +88,7 @@ const AdminLogin = () => {
                                             </button>
                                         </div>
                                     </form>
-                                    {message && <p>{message}</p>} 
+                                    {message && <p>{message}</p>}
                                 </div>
                             </div>
                         </div>
