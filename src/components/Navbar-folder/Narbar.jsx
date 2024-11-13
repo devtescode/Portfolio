@@ -34,7 +34,7 @@ const Narbar = () => {
                         <span className="navbar-toggler-icon" />
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder text-center">
                             <li className="nav-item">
                                 <a className="nav-link"  style={{cursor:"pointer"}} onClick={NarbarBtn}>
                                     Home
