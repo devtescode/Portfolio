@@ -18,7 +18,6 @@ import History from './components/History-page/History'
 function App() {
 
   return (
-    <>
       <Routes>
         <Route path='/' element={<Portfolio/>}/>
         <Route path='/resume' element={<Resume/>}/>

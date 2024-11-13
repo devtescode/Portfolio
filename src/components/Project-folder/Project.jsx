@@ -6,9 +6,6 @@ import PortfolioFilter from '../../assets/js/PortfolioFilter'
 
 
 const Project = () => {
-
-
-
     return (
         <>
             <main className="flex-shrink-0">

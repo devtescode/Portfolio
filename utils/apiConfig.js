@@ -7,7 +7,7 @@ export const API_URLS = {
     getprojects:  `${baseURL}/api/projects`,
     delectprojects: (projectId) =>  ` ${baseURL}/api/projects/${projectId}`,
     editprojects: (editingProject) => `${baseURL}/api/projects/${editingProject._id}`,
-    fetchimage: `${baseURL}/api/images`
-  
+    fetchimage: `${baseURL}/api/images`,
+    upload: `${baseURL}/api/upload`
    
 };  

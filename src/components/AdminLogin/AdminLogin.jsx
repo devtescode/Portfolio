@@ -14,11 +14,13 @@ const AdminLogin = () => {
         try {
             // 'http://localhost:4000/portfolio/login'
             const response = await axios.post(API_URLS.adminlogin , { email, password });
-            localStorage.setItem('token', response.data.token); // Store token in localStorage
+            localStorage.setItem('token', response.data.token);
             setMessage(response.data.message);
+            alert(response.data.message)
             navigate("/admindb")
         } catch (error) {
             setMessage(error.response.data.message);
+            alert(error.response.data.message)
         }
     };
 

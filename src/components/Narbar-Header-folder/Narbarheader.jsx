@@ -13,6 +13,9 @@ const Narbarheader = () => {
   const HistoryBtn = () => {
         navigate("/history")
   }
+  const LogoutBtn = ()=>{
+    navigate("/adminlogin")
+  }
   return (
     <>
       <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -36,6 +39,10 @@ const Narbarheader = () => {
 
               <li class="nav-item">
                 <a class="nav-link" style={{cursor:"pointer"}} onClick={HistoryBtn}>History</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" style={{cursor:"pointer"}} onClick={LogoutBtn}>Log-Out</a>
               </li>
 
               <li class="nav-item">
