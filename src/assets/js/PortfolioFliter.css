@@ -5,6 +5,10 @@
   gap: 15px; /* Adjust gap between cards */
 }
 
+/* .project-responsive{
+  width: 100vh;
+} */
+
 .project-card {
   display: flex;
   flex-direction: column;

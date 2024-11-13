@@ -28,7 +28,7 @@ const PortfolioFilter = () => {
     : images.filter(image => image.projectType === filter);
 
   return (
-    <div className='container'>
+    <>
       {/* <h2 className='text-center'>Explore Our Projects</h2> */}
       
       <div className='text-center my-4'>
@@ -55,7 +55,7 @@ const PortfolioFilter = () => {
       </div>
 
       <div className='row'>
-        <div className='project-grid'>
+        <div className='project-grid '>
           {filteredImages.length === 0 ? (
             <div className='col-12 text-center'>
               <p>No projects to display.</p>
@@ -63,7 +63,7 @@ const PortfolioFilter = () => {
           ) : (
             filteredImages.map((image, index) => (
               <div className='project-card' key={index}>
-                <div className='card shadow-lg border-0 rounded'>
+                <div className='card shadow-lg rounded project-responsive'>
                   <img
                     src={image.url}
                     alt="Uploaded Project"
@@ -89,7 +89,7 @@ const PortfolioFilter = () => {
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

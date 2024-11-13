@@ -19,8 +19,8 @@ const Project = () => {
                                 {/* <span className="text-gradient d-inline">Projects</span> */}
                             </h1>
                         </div>
-                        <section id="portfolio" className="portfolio section-bg">
-                            <div className="container" data-aos="fade-up">
+                        <section id="portfolio" className="portfolio section-bg ">
+                            <div className="container"  data-aos="fade-up">
                                 <div className="section-title">
                                     <h2>Projects</h2>
                                     <p>
