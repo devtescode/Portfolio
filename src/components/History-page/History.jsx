@@ -84,7 +84,7 @@ const History = () => {
                 <Narbarheader />
             </div>
 
-            <div className="container mt-4">
+            <div className="container" style={{ marginTop: "70px" }}>
                 <h2 className="text-center">Project History</h2>
 
                 {/* Table for Displaying Projects */}

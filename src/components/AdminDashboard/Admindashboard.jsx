@@ -33,7 +33,7 @@ const Admindashboard = () => {
             <div>
                 <Narbarheader />
             </div>
-            <div className="container text-center">
+            <div className="container text-center" style={{ marginTop: "70px" }}>
                 <div className="row align-items-start mt-1 gap-2">
                     <div className="col-12 col-md border bg-white d-flex" style={{ height: "200px", alignItems: "center" }}>
                         <div className='mx-auto'>

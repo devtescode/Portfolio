@@ -74,7 +74,7 @@ const Uploadpage = () => {
             <div>
                 <Narbarheader />
             </div>
-            <div className='col-md-6 col-sm-12 mx-auto text-center bg-white p-3 mt-1'>
+            <div className='col-md-6 col-sm-12 mx-auto text-center bg-white p-3' style={{ marginTop: "70px" }}>
                 <b>Upload Project</b>
                 <input
                     type="text"
