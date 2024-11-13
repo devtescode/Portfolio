@@ -16,7 +16,6 @@ const AdminLogin = () => {
             const response = await axios.post(API_URLS.adminlogin, { email, password });
             localStorage.setItem('token', response.data.token);
             setMessage(response.data.message);
-            // alert(response.data.message)
             Swal.fire({
                 icon: "success",
                 title: "",
