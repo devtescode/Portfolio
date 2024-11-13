@@ -9,7 +9,7 @@ const Uploadpage = () => {
     const [deployLink, setDeployLink] = useState('');
     const [file, setFile] = useState(null);
     const [projectType, setProjectType] = useState('New');
-    const [isLoading, setIsLoading] = useState(false); // New loading state
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleFileChange = (e) => {
         setFile(e.target.files[0]);
@@ -22,7 +22,7 @@ const Uploadpage = () => {
                 title: "Oops...",
                 text: "Please fill in all fields and select a file to upload.",
             });
-            return; // Stop further execution if validation fails
+            return;
         }
 
         const formData = new FormData();
@@ -31,7 +31,7 @@ const Uploadpage = () => {
         formData.append('deployLink', deployLink);
         formData.append('projectType', projectType);
 
-        setIsLoading(true); // Start loading
+        setIsLoading(true);
 
         try {
             const response = await axios.post(API_URLS.upload, formData, {
@@ -39,19 +39,33 @@ const Uploadpage = () => {
                     'Content-Type': 'multipart/form-data',
                 },
             });
+            console.log('Upload Response:', response); // Log the response
+
             Swal.fire({
                 icon: "success",
                 title: "",
                 text: "Image uploaded successfully!",
-              });
+            });
+
+            // Clear input fields after successful upload
+            setProjectName('');
+            setDeployLink('');
+            setFile(null);
+            setProjectType('New');
+            document.getElementById("fileInput").value = ""; // Make sure `id` matches file input
+
         } catch (error) {
             console.error('Error uploading image:', error);
-            alert('Error uploading image');
+
+            Swal.fire({
+                icon: "error",
+                title: "",
+                text: error.response?.data?.message || "Error uploading image!",
+            });
         } finally {
-            setIsLoading(false); // Stop loading after the request completes
+            setIsLoading(false);
         }
     };
-
     return (
         <>
             <div>
@@ -76,7 +90,7 @@ const Uploadpage = () => {
                     value={deployLink}
                     onChange={(e) => setDeployLink(e.target.value)}
                 />
-                <input type="file" className='form-control my-2' onChange={handleFileChange} />
+                <input type="file" id="fileInput" className='form-control my-2' onChange={handleFileChange} />
                 <select
                     className='form-control my-2'
                     value={projectType}
