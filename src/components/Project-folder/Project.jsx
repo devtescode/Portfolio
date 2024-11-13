@@ -1,6 +1,5 @@
 import React from 'react'
 import Narbar from '../Navbar-folder/Narbar'
-import Portfolioimage from '../../Images/portfolio.png'
 import PortfolioFilter from '../../assets/js/PortfolioFilter'
 // import * as Utils from "./utils";
 

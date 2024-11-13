@@ -2,6 +2,9 @@ import React from 'react'
 import Narbar from '../Navbar-folder/Narbar'
 
 const Contact = () => {
+    const ContactBtn= ()=>{
+        alert("Still Working on it")
+    }
     return (
         <>
             <main className="flex-shrink-0">
@@ -123,7 +126,8 @@ const Contact = () => {
                                         {/* Submit Button*/}
                                         <div className="d-grid">
                                             <button
-                                                className="btn btn-primary btn-lg disabled"
+                                            onClick={ContactBtn}
+                                                className="btn btn-primary btn-lg"
                                                 id="submitButton"
                                                 type="submit"
                                             >
