@@ -1,4 +1,5 @@
 import React from 'react'
+import Portfolioimage from '../../Images/portfolio.png'
 import { useNavigate } from 'react-router-dom'
 import Narbar from '../Navbar-folder/Narbar'
 
