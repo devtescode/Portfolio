@@ -113,7 +113,7 @@ const Contact = () => {
                                                                 component="div"
                                                                 className="text-danger mt-1"
                                                             />
-                                                            {touched[field] && (
+                                                            {/* {touched[field] && (
                                                                 errors[field] ? (
                                                                     <BiErrorCircle
                                                                         className="text-danger position-absolute end-0 me-3 mt-3"
@@ -125,10 +125,10 @@ const Contact = () => {
                                                                         size={20}
                                                                     />
                                                                 )
-                                                            )}
+                                                            )} */}
                                                         </div>
                                                     ))}
-                                                    <div className="d-grid">
+                                                    <div className="text-center">
                                                         <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
                                                             {loading ? 'Processing...' : 'Submit'}
                                                         </button>

@@ -49,7 +49,7 @@ const AdminLogin = () => {
                     <Narbar />
                 </div>
                 <section className="py-5">
-                    <div className="container px-5">
+                    <div className="container px-0 px-sm-5">
                         <div className="bg-light rounded-4 py-5 px-4 px-md-5">
                             <div className="text-center mb-5">
                                 <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-2">
@@ -78,7 +78,7 @@ const AdminLogin = () => {
                                                 onChange={(e) => setPassword(e.target.value)}
                                             />
                                         </div>
-                                        <div className="d-grid">
+                                        <div className="text-center">
                                             <button
                                                 type='submit'
                                                 className="btn btn-primary btn-lg"
