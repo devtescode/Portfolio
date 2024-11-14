@@ -7,7 +7,9 @@ import { BiCheckCircle, BiErrorCircle } from 'react-icons/bi';
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
-    name: Yup.string().required('Name is required'),
+    name: Yup.string()
+        .matches(/^[A-Za-z\s]+$/, "Name should only contain letters")
+        .required('Name is required'),
     email: Yup.string().email('Invalid email format').required('Email is required'),
     phone: Yup.string()
         .matches(/^[0-9]+$/, 'Phone number should only contain numbers')
@@ -32,7 +34,13 @@ const Contact = () => {
             });
 
             if (response.ok) {
-                alert('Message sent successfully!');
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    text: "Message sent successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
                 resetForm();
             } else {
                 alert('Failed to send message.');
@@ -48,9 +56,7 @@ const Contact = () => {
     return (
         <>
             <main className="flex-shrink-0">
-                <div>
-                    <Narbar />
-                </div>
+                <Narbar />
                 <section className="py-5">
                     <div className="container mt-4">
                         <div className="bg-light rounded-4 py-5 px-md-5">
@@ -72,49 +78,64 @@ const Contact = () => {
                                         }}
                                         validationSchema={validationSchema}
                                         onSubmit={handleSubmit}
+                                        validateOnChange={true} // Real-time validation
+                                        validateOnBlur={true}   // Also validate when user leaves field
                                     >
-                                        {({ errors, touched }) => (
-                                            <Form>
-                                                {['name', 'email', 'phone', 'message'].map((field, index) => (
-                                                    <div className="form-floating mb-3" key={index}>
-                                                        <Field
-                                                            className={`form-control ${
-                                                                errors[field] && touched[field] ? 'is-invalid' : ''
-                                                            } ${!errors[field] && touched[field] ? 'is-valid' : ''}`}
-                                                            id={field}
-                                                            name={field}
-                                                            placeholder={`Enter your ${field}...`}
-                                                            as={field === 'message' ? 'textarea' : 'input'}
-                                                            style={field === 'message' ? { height: '10rem' } : {}}
-                                                        />
-                                                        <label htmlFor={field} className="form-label">
-                                                            {field.charAt(0).toUpperCase() + field.slice(1)}
-                                                        </label>
-                                                        <ErrorMessage
-                                                            name={field}
-                                                            component="div"
-                                                            className="text-danger mt-1"
-                                                        />
-                                                        {touched[field] && (
-                                                            errors[field] ? (
-                                                                <BiErrorCircle
-                                                                    className="text-danger position-absolute end-0 me-3 mt-3"
-                                                                />
-                                                            ) : (
-                                                                <BiCheckCircle
-                                                                    className="text-success position-absolute end-0 me-3 mt-3"
-                                                                />
-                                                            )
-                                                        )}
+                                        {({ errors, touched, values, handleChange, handleBlur, setFieldTouched }) => {
+                                            // Ensure to trigger validation as user types
+                                            const handleFieldChange = (e) => {
+                                                const { name, value } = e.target;
+                                                handleChange(e); // Formik's handleChange
+                                                setFieldTouched(name, true, false); // Mark field as touched
+                                            };
+
+                                            return (
+                                                <Form>
+                                                    {['name', 'email', 'phone', 'message'].map((field, index) => (
+                                                        <div className="form-floating mb-3 position-relative" key={index}>
+                                                            <Field
+                                                                className={`form-control ${
+                                                                    errors[field] && touched[field] ? 'is-invalid' : ''
+                                                                } ${!errors[field] && touched[field] ? 'is-valid' : ''}`}
+                                                                id={field}
+                                                                name={field}
+                                                                placeholder={`Enter your ${field}...`}
+                                                                as={field === 'message' ? 'textarea' : 'input'}
+                                                                style={field === 'message' ? { height: '10rem' } : {}}
+                                                                onBlur={handleBlur}
+                                                                onChange={handleFieldChange} // Real-time validation trigger
+                                                            />
+                                                            <label htmlFor={field} className="form-label">
+                                                                {field.charAt(0).toUpperCase() + field.slice(1)}
+                                                            </label>
+                                                            <ErrorMessage
+                                                                name={field}
+                                                                component="div"
+                                                                className="text-danger mt-1"
+                                                            />
+                                                            {touched[field] && (
+                                                                errors[field] ? (
+                                                                    <BiErrorCircle
+                                                                        className="text-danger position-absolute end-0 me-3 mt-3"
+                                                                        size={20}
+                                                                    />
+                                                                ) : (
+                                                                    <BiCheckCircle
+                                                                        className="text-success position-absolute end-0 me-3 mt-3"
+                                                                        size={20}
+                                                                    />
+                                                                )
+                                                            )}
+                                                        </div>
+                                                    ))}
+                                                    <div className="d-grid">
+                                                        <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
+                                                            {loading ? 'Processing...' : 'Submit'}
+                                                        </button>
                                                     </div>
-                                                ))}
-                                                <div className="d-grid">
-                                                    <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
-                                                        {loading ? 'Processing...' : 'Submit'}
-                                                    </button>
-                                                </div>
-                                            </Form>
-                                        )}
+                                                </Form>
+                                            );
+                                        }}
                                     </Formik>
                                 </div>
                             </div>
