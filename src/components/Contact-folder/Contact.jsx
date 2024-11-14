@@ -1,15 +1,55 @@
-import React from 'react'
-import Narbar from '../Navbar-folder/Narbar'
+import React, { useState } from 'react';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import Narbar from '../Navbar-folder/Narbar';
+import { API_URLS } from '../../../utils/apiConfig';
+import { BiCheckCircle, BiErrorCircle } from 'react-icons/bi';
+
+// Validation schema using Yup
+const validationSchema = Yup.object({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email format').required('Email is required'),
+    phone: Yup.string()
+        .matches(/^[0-9]+$/, 'Phone number should only contain numbers')
+        .min(10, 'Phone number should be at least 10 digits')
+        .required('Phone number is required'),
+    message: Yup.string().required('Message is required')
+});
 
 const Contact = () => {
-    const ContactBtn= ()=>{
-        alert("Still Working on it")
-    }
+    const [loading, setLoading] = useState(false);
+
+    const handleSubmit = async (values, { resetForm }) => {
+        setLoading(true);
+
+        try {
+            const response = await fetch(API_URLS.contact, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(values)
+            });
+
+            if (response.ok) {
+                alert('Message sent successfully!');
+                resetForm();
+            } else {
+                alert('Failed to send message.');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('An error occurred while sending the message.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <>
             <main className="flex-shrink-0">
                 <div>
-                    <Narbar/>
+                    <Narbar />
                 </div>
                 <section className="py-5">
                     <div className="container mt-4">
@@ -23,127 +63,67 @@ const Contact = () => {
                             </div>
                             <div className="row gx-5 justify-content-center">
                                 <div className="col-lg-8 col-xl-6">
-                                    
-                                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                                        <div className="form-floating mb-3">
-                                            <input
-                                                className="form-control"
-                                                id="name"
-                                                type="text"
-                                                placeholder="Enter your name..."
-                                                data-sb-validations="required"
-                                            />
-                                            <label htmlFor="name">Full name</label>
-                                            <div
-                                                className="invalid-feedback"
-                                                data-sb-feedback="name:required"
-                                            >
-                                                A name is required.
-                                            </div>
-                                        </div>
-                                        {/* Email address input*/}
-                                        <div className="form-floating mb-3">
-                                            <input
-                                                className="form-control"
-                                                id="email"
-                                                type="email"
-                                                placeholder="name@example.com"
-                                                data-sb-validations="required,email"
-                                            />
-                                            <label htmlFor="email">Email address</label>
-                                            <div
-                                                className="invalid-feedback"
-                                                data-sb-feedback="email:required"
-                                            >
-                                                An email is required.
-                                            </div>
-                                            <div
-                                                className="invalid-feedback"
-                                                data-sb-feedback="email:email"
-                                            >
-                                                Email is not valid.
-                                            </div>
-                                        </div>
-                                        {/* Phone number input*/}
-                                        <div className="form-floating mb-3">
-                                            <input
-                                                className="form-control"
-                                                id="phone"
-                                                type="tel"
-                                                placeholder="(123) 456-7890"
-                                                data-sb-validations="required"
-                                            />
-                                            <label htmlFor="phone">Phone number</label>
-                                            <div
-                                                className="invalid-feedback"
-                                                data-sb-feedback="phone:required"
-                                            >
-                                                A phone number is required.
-                                            </div>
-                                        </div>
-                                        {/* Message input*/}
-                                        <div className="form-floating mb-3">
-                                            <textarea
-                                                className="form-control"
-                                                id="message"
-                                                type="text"
-                                                placeholder="Enter your message here..."
-                                                style={{ height: "10rem" }}
-                                                data-sb-validations="required"
-                                                defaultValue={""}
-                                            />
-                                            <label htmlFor="message">Message</label>
-                                            <div
-                                                className="invalid-feedback"
-                                                data-sb-feedback="message:required"
-                                            >
-                                                A message is required.
-                                            </div>
-                                        </div>
-                                        {/* Submit success message*/}
-                                        {/**/}
-                                        {/* This is what your users will see when the form*/}
-                                        {/* has successfully submitted*/}
-                                        <div className="d-none" id="submitSuccessMessage">
-                                            <div className="text-center mb-3">
-                                                <div className="fw-bolder">Form submission successful!</div>
-                                                To activate this form, sign up at
-                                                <br />
-                                                <a href="https://startbootstrap.com/solution/contact-forms">
-                                                    https://startbootstrap.com/solution/contact-forms
-                                                </a>
-                                            </div>
-                                        </div>
-                                        {/* Submit error message*/}
-                                        {/**/}
-                                        {/* This is what your users will see when there is*/}
-                                        {/* an error submitting the form*/}
-                                        <div className="d-none" id="submitErrorMessage">
-                                            <div className="text-center text-danger mb-3">
-                                                Error sending message!
-                                            </div>
-                                        </div>
-                                        {/* Submit Button*/}
-                                        <div className="d-grid">
-                                            <button
-                                            onClick={ContactBtn}
-                                                className="btn btn-primary btn-lg"
-                                                id="submitButton"
-                                                type="submit"
-                                            >
-                                                Submit
-                                            </button>
-                                        </div>
-                                    </form>
+                                    <Formik
+                                        initialValues={{
+                                            name: '',
+                                            email: '',
+                                            phone: '',
+                                            message: ''
+                                        }}
+                                        validationSchema={validationSchema}
+                                        onSubmit={handleSubmit}
+                                    >
+                                        {({ errors, touched }) => (
+                                            <Form>
+                                                {['name', 'email', 'phone', 'message'].map((field, index) => (
+                                                    <div className="form-floating mb-3" key={index}>
+                                                        <Field
+                                                            className={`form-control ${
+                                                                errors[field] && touched[field] ? 'is-invalid' : ''
+                                                            } ${!errors[field] && touched[field] ? 'is-valid' : ''}`}
+                                                            id={field}
+                                                            name={field}
+                                                            placeholder={`Enter your ${field}...`}
+                                                            as={field === 'message' ? 'textarea' : 'input'}
+                                                            style={field === 'message' ? { height: '10rem' } : {}}
+                                                        />
+                                                        <label htmlFor={field} className="form-label">
+                                                            {field.charAt(0).toUpperCase() + field.slice(1)}
+                                                        </label>
+                                                        <ErrorMessage
+                                                            name={field}
+                                                            component="div"
+                                                            className="text-danger mt-1"
+                                                        />
+                                                        {touched[field] && (
+                                                            errors[field] ? (
+                                                                <BiErrorCircle
+                                                                    className="text-danger position-absolute end-0 me-3 mt-3"
+                                                                />
+                                                            ) : (
+                                                                <BiCheckCircle
+                                                                    className="text-success position-absolute end-0 me-3 mt-3"
+                                                                />
+                                                            )
+                                                        )}
+                                                    </div>
+                                                ))}
+                                                <div className="d-grid">
+                                                    <button className="btn btn-primary btn-lg" type="submit" disabled={loading}>
+                                                        {loading ? 'Processing...' : 'Submit'}
+                                                    </button>
+                                                </div>
+                                            </Form>
+                                        )}
+                                    </Formik>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
-
         </>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;

@@ -1,10 +1,15 @@
 import React from 'react'
 import Narbar from '../Navbar-folder/Narbar'
 import PortfolioFilter from '../../assets/js/PortfolioFilter'
+import { useNavigate } from 'react-router-dom'
 // import * as Utils from "./utils";
 
 
 const Project = () => {
+    const navigate = useNavigate()
+    const ContantBtn = ()=>{
+        navigate("/contact")
+    }
     return (
         <>
             <main className="flex-shrink-0">
@@ -40,8 +45,8 @@ const Project = () => {
                                 Let's build something together
                             </h2>
                             <a
-                                className="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
-                               
+                                className="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" 
+                                onClick={ContantBtn}  
                             >
                                 Contact me
                             </a>
