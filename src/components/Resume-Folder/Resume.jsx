@@ -8,7 +8,7 @@ const Resume = () => {
                 <div>
                     <Narbar/>
                 </div>                
-                <div className="container px-5" style={{marginTop:"85x "}}>
+                <div className="container" style={{marginTop:"85x "}}>
                     <div className="text-center mb-5">
                         <h1 className="display-5 fw-bolder mb-0">
                             <span className="text-gradient d-inline">Resume</span>
@@ -130,14 +130,10 @@ const Resume = () => {
                                     </div>
                                 </div>
                             </section>
-                            {/* Divider*/}
-                            <div className="pb-5" />
-                            {/* Skills Section*/}
+                            
                             <section>
-                                {/* Skillset Card*/}
-                                <div className="card shadow border-0 rounded-4 mb-5">
-                                    <div className="card-body p-5">
-                                        {/* Professional skills list*/}
+                                <div className="card border-0 rounded-4 mb-5 shadow-lg">
+                                    <div className="card-body ">
                                         <div className="mb-5">
                                             <div className="d-flex align-items-center mb-4">
                                                 <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3">

@@ -12,7 +12,7 @@ const Project = () => {
                     <Narbar />
                 </div>
                 <section className="py-5">
-                    <div className="container px-5 mb-5" style={{ marginTop: "50px" }}>
+                    <div className="container px-0 px-sm-5 mb-5" style={{ marginTop: "50px" }}>
                         <div className="text-center mb-5">
                             <h1 className="display-5 fw-bolder mb-0">
                                 {/* <span className="text-gradient d-inline">Projects</span> */}
@@ -34,7 +34,7 @@ const Project = () => {
                 </section>
                 {/* Call to action section*/}
                 <section className="py-5 bg-gradient-primary-to-secondary text-white">
-                    <div className="container px-5 my-5">
+                    <div className="container px-5">
                         <div className="text-center">
                             <h2 className="display-4 fw-bolder mb-4">
                                 Let's build something together
