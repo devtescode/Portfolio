@@ -12,8 +12,8 @@ const Contact = () => {
                     <Narbar/>
                 </div>
                 <section className="py-5">
-                    <div className="container px-5">
-                        <div className="bg-light rounded-4 py-5 px-4 px-md-5">
+                    <div className="container mt-4">
+                        <div className="bg-light rounded-4 py-5 px-md-5">
                             <div className="text-center mb-5">
                                 <div className="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3">
                                     <i className="bi bi-envelope" />
