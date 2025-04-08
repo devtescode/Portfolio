@@ -1,11 +1,12 @@
-import "./PortfolioFliter.css"
+import "./PortfolioFliter.css";
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { API_URLS } from "../../../utils/apiConfig";
 
 const PortfolioFilter = () => {
   const [images, setImages] = useState([]);
-  const [filter, setFilter] = useState('All'); // Default to "All"
+  const [filter, setFilter] = useState('All');
+  const [loading, setLoading] = useState(true); // 👈 Track loading state
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -18,6 +19,8 @@ const PortfolioFilter = () => {
         }
       } catch (error) {
         console.error('Error fetching images:', error);
+      } finally {
+        setLoading(false); // 👈 Set loading to false after attempt
       }
     };
     fetchImages();
@@ -29,36 +32,29 @@ const PortfolioFilter = () => {
 
   return (
     <>
-      {/* <h2 className='text-center'>Explore Our Projects</h2> */}
-      
       <div className='text-center my-4'>
         <div className='btn-group'>
-          <button
-            className={`btn btn-outline-primary ${filter === 'All' ? 'active' : ''}`}
-            onClick={() => setFilter('All')}
-          >
-            All Projects
-          </button>
-          <button
-            className={`btn btn-outline-primary ${filter === 'New' ? 'active' : ''}`}
-            onClick={() => setFilter('New')}
-          >
-            New Projects
-          </button>
-          <button
-            className={`btn btn-outline-primary ${filter === 'Old' ? 'active' : ''}`}
-            onClick={() => setFilter('Old')}
-          >
-            Old Projects
-          </button>
+          {['All', 'New', 'Old'].map(type => (
+            <button
+              key={type}
+              className={`btn btn-outline-primary ${filter === type ? 'active' : ''}`}
+              onClick={() => setFilter(type)}
+            >
+              {type === 'All' ? 'All Projects' : `${type} Projects`}
+            </button>
+          ))}
         </div>
       </div>
 
       <div className='row'>
-        <div className='project-grid '>
-          {filteredImages.length === 0 ? (
+        <div className='project-grid'>
+          {loading ? (
             <div className='col-12 text-center'>
-              <p>No projects to display.</p>
+              <p>Loading projects, please wait...</p> {/* 👈 Loading indicator */}
+            </div>
+          ) : filteredImages.length === 0 ? (
+            <div className='col-12 text-center'>
+              <p>No projects to display at the moment.</p>
             </div>
           ) : (
             filteredImages.map((image, index) => (
@@ -67,8 +63,8 @@ const PortfolioFilter = () => {
                   <img
                     src={image.url}
                     alt="Uploaded Project"
-                    className='card-img-top rounded-top' 
-                    style={{height:"100%"}}
+                    className='card-img-top rounded-top'
+                    style={{ height: "100%" }}
                   />
                   <div className='card-body'>
                     <h5 className='card-title text-truncate'>{image.projectName}</h5>
