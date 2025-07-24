@@ -1,5 +1,5 @@
 import React from 'react'
-import Portfolioimage from '../../Images/portfolio.png'
+import Portfolioimage from '../../Images/portfolio.webp'
 import { useNavigate } from 'react-router-dom'
 import Narbar from '../Navbar-folder/Narbar'
 
@@ -104,6 +104,7 @@ const Portfolio = () => {
                                             src={Portfolioimage}
                                             style={{  height: "100%" }}
                                             alt="..."
+                                            loading="eager"
                                         />
                                         <div className="dots-1">
                                             <svg
