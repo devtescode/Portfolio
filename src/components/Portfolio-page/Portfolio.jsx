@@ -54,6 +54,46 @@ const Portfolio = () => {
                                     </div>
                                 </div>
                             </div>
+                            <div className="d-flex justify-content-center fs-2">
+                                <div className='px-3 rounded-3 shadow-lg justify-content-center align-items-center d-flex gap-3'>
+
+                                    <a
+                                        className="text-gradient"
+                                        href="https://x.com/TeslimAgboola1?t=iz0Cs-gA935IM2Drk1QfMQ&s=09"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="ri-twitter-x-line"></i>
+                                    </a>
+
+                                    <a
+                                        className="text-gradient"
+                                        href="https://www.linkedin.com/in/teslim-agboola-ab069b252/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="ri-linkedin-box-fill"></i>
+                                    </a>
+
+                                    <a
+                                        className="text-gradient"
+                                        href="https://github.com/devtescode"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="ri-github-fill"></i>
+                                    </a>
+
+                                    <a
+                                        className="text-gradient"
+                                        href="https://wa.me/message/6L2NE6QD6DYFN1"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <i className="ri-whatsapp-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
                             <div className="col-xxl-7">
                                 <div className="d-flex justify-content-center mt-5 mt-xxl-0">
                                     <div className="profile bg-gradient-primary-to-secondary">
@@ -256,43 +296,6 @@ const Portfolio = () => {
                     </div>
                 </div>
             </footer> */}
-            <div className="d-flex justify-content-center fs-2 gap-4 mt-4">
-                <a
-                    className="text-gradient"
-                    href="https://x.com/TeslimAgboola1?t=iz0Cs-gA935IM2Drk1QfMQ&s=09"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="ri-twitter-x-line"></i>
-                </a>
-
-                <a
-                    className="text-gradient"
-                    href="https://www.linkedin.com/in/teslim-agboola-ab069b252/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="ri-linkedin-box-fill"></i>
-                </a>
-
-                <a
-                    className="text-gradient"
-                    href="https://github.com/devtescode"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="ri-github-fill"></i>
-                </a>
-
-                <a
-                    className="text-gradient"
-                    href="https://wa.me/message/6L2NE6QD6DYFN1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    <i className="ri-whatsapp-fill"></i>
-                </a>
-            </div>
 
         </>
 
