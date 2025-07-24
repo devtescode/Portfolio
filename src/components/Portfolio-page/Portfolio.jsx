@@ -224,7 +224,7 @@ const Portfolio = () => {
                                     </p>
                                     <p className="text-muted">
 
-                                     I’m an experienced full-stack developer with a solid foundation in software engineering from SQI College of ICT in Nigeria. I honed my skills further through an internship at Lautech ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
+                                     I’m an experienced full-stack developer with a solid foundation in software engineering from SQI College of ICT. I honed my skills further through an internship at Lautech ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
                                     </p>
                                     <div className="d-flex justify-content-center fs-2 gap-4">
                                         <a className="text-gradient" href="#!">
