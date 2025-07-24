@@ -101,7 +101,7 @@ const Portfolio = () => {
                                         <img
                                             className="profile-img"
                                             src={Portfolioimage}
-                                            style={{  height: "100%",  }}
+                                            style={{  height: "100%" }}
                                             alt="..."
                                         />
                                         <div className="dots-1">
