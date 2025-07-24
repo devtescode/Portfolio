@@ -253,7 +253,7 @@ const Portfolio = () => {
                 </header>
                 {/* About Section*/}
                 <section className="bg-light py-2">
-                    <div className="container px-5">
+                    <div className="container px-2">
                         <div className="row gx-5 justify-content-center">
                             <div className="col-xxl-8">
                                 <div className="text-center my-5">
@@ -263,8 +263,7 @@ const Portfolio = () => {
                                     <p className="lead fw-light mb-4">
                                         My name is Agboola Teslim Ayodele,
                                     </p>
-                                    <p className="text-muted">
-
+                                    <p className="text-muted" style={{textAlign:"justify"}}>
                                         I’m an experienced Full-Stack Developer with a solid foundation in software engineering from SQI College of ICT. I enhanced my practical skills through the SIWES program at LAUTECH ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
                                     </p>
 
