@@ -34,7 +34,7 @@ const Resume = () => {
                                             <div className="col text-center text-lg-start mb-4 mb-lg-0">
                                                 <div className="bg-light p-4 rounded-4">
                                                     <div className="text-primary fw-bolder mb-2">
-                                                        2024 - Present
+                                                        2025 - Present
                                                     </div>
                                                     <div className="small fw-bolder">Web Developer</div>
                                                     <div className="small text-muted">SQI College Of ICT</div>

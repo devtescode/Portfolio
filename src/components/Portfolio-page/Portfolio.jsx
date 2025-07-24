@@ -1,5 +1,5 @@
 import React from 'react'
-import Portfolioimage from '../../Images/secportfolio.png'
+import Portfolioimage from '../../Images/portfolio.png'
 import { useNavigate } from 'react-router-dom'
 import Narbar from '../Navbar-folder/Narbar'
 
@@ -96,7 +96,8 @@ const Portfolio = () => {
                             </div>
                             <div className="col-xxl-7">
                                 <div className="d-flex justify-content-center mt-5 mt-xxl-0">
-                                    <div className="profile bg-gradient-primary-to-secondary">
+                                    {/* bg-gradient-primary-to-secondary */}
+                                    <div className="profile bg-dark">
 
                                         <img
                                             className="profile-img"
