@@ -9,7 +9,7 @@ const Portfolio = () => {
     const ResumeBtn = () => {
         navigate("/resume")
     }
-    const ProjectsBtn = ()=>{
+    const ProjectsBtn = () => {
         navigate("/project")
     }
     return (
@@ -22,7 +22,7 @@ const Portfolio = () => {
                     <div className="container px-5 pb-5">
                         <div className="row gx-5 align-items-center">
                             <div className="col-xxl-5">
-                                <div className="text-center text-xxl-start" style={{marginTop:"80px"}}>
+                                <div className="text-center text-xxl-start" style={{ marginTop: "80px" }}>
                                     <div className="badge bg-gradient-primary-to-secondary text-white mb-4">
                                         <div className="text-uppercase">
 
@@ -211,7 +211,7 @@ const Portfolio = () => {
                     </div>
                 </header>
                 {/* About Section*/}
-                <section className="bg-light py-5">
+                <section className="bg-light py-2">
                     <div className="container px-5">
                         <div className="row gx-5 justify-content-center">
                             <div className="col-xxl-8">
@@ -224,19 +224,9 @@ const Portfolio = () => {
                                     </p>
                                     <p className="text-muted">
 
-                                     I’m an experienced Full-Stack Developer with a solid foundation in software engineering from SQI College of ICT. I enhanced my practical skills through the SIWES program at LAUTECH ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
+                                        I’m an experienced Full-Stack Developer with a solid foundation in software engineering from SQI College of ICT. I enhanced my practical skills through the SIWES program at LAUTECH ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
                                     </p>
-                                    <div className="d-flex justify-content-center fs-2 gap-4">
-                                        <a className="text-gradient" href="#!">
-                                            <i className="bi bi-twitter" />
-                                        </a>
-                                        <a className="text-gradient" href="#!">
-                                            <i className="bi bi-linkedin" />
-                                        </a>
-                                        <a className="text-gradient" href="#!">
-                                            <i className="bi bi-github" />
-                                        </a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -266,6 +256,44 @@ const Portfolio = () => {
                     </div>
                 </div>
             </footer> */}
+            <div className="d-flex justify-content-center fs-2 gap-4 mt-4">
+                <a
+                    className="text-gradient"
+                    href="https://x.com/TeslimAgboola1?t=iz0Cs-gA935IM2Drk1QfMQ&s=09"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="ri-twitter-x-line"></i>
+                </a>
+
+                <a
+                    className="text-gradient"
+                    href="https://www.linkedin.com/in/teslim-agboola-ab069b252/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="ri-linkedin-box-fill"></i>
+                </a>
+
+                <a
+                    className="text-gradient"
+                    href="https://github.com/devtescode"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="ri-github-fill"></i>
+                </a>
+
+                <a
+                    className="text-gradient"
+                    href="https://wa.me/message/6L2NE6QD6DYFN1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <i className="ri-whatsapp-fill"></i>
+                </a>
+            </div>
+
         </>
 
     )
