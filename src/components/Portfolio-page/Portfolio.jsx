@@ -1,5 +1,5 @@
 import React from 'react'
-import Portfolioimage from '../../Images/portfolio.png'
+import Portfolioimage from '../../Images/secportfolio.png'
 import { useNavigate } from 'react-router-dom'
 import Narbar from '../Navbar-folder/Narbar'
 
@@ -101,6 +101,7 @@ const Portfolio = () => {
                                         <img
                                             className="profile-img"
                                             src={Portfolioimage}
+                                            style={{  height: "100%",   filter: "brightness(1.1)"  }}
                                             alt="..."
                                         />
                                         <div className="dots-1">
