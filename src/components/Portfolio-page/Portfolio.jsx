@@ -29,18 +29,25 @@ const Portfolio = () => {
                                             Software Engineering (Web Development)
                                         </div>
                                     </div>
-                                    <div className="fs-3 fw-light text-muted">
+                                    {/* <div className="fs-3 fw-light text-muted">
                                         I can help your business to
-                                    </div>
-                                    <h1 className="display-4 fw-bolder mb-5">
+                                    </div> */}
+                                    <h1
+                                        className="display-4 fw-bolder mb-5 text-center mx-auto"
+                                        style={{
+                                            maxWidth: "750px",
+                                            lineHeight: "1.3",
+                                            textAlign: "center"
+                                        }}
+                                    >
                                         <span className="text-gradient d-inline">
-                                            Get online and grow quickly
-                                            with my web development expertise
+                                            I create clean, scalable, and high-performing websites that help brands launch and grow online.
                                         </span>
                                     </h1>
+
                                     <div className="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
                                         <a
-                                            className="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
+                                            className="btn bg-gradient-primary-to-secondary text-white btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder"
                                             onClick={ResumeBtn}
                                         >
                                             Resume
@@ -102,7 +109,7 @@ const Portfolio = () => {
                                         <img
                                             className="profile-img"
                                             src={Portfolioimage}
-                                            style={{  height: "100%" }}
+                                            style={{ height: "100%" }}
                                             alt="..."
                                             loading="eager"
                                         />
@@ -265,8 +272,8 @@ const Portfolio = () => {
                                     <p className="lead fw-light mb-4">
                                         My name is Agboola Teslim Ayodele,
                                     </p>
-                                    <p className="text-muted" style={{textAlign:"justify"}}>
-                                        I’m an experienced Full-Stack Developer with a solid foundation in software engineering from SQI College of ICT. I enhanced my practical skills through the SIWES program at LAUTECH ICT, where I gained valuable industry experience. Driven by a passion for technology, I’ve worked on a range of projects that showcase my ability to create effective software solutions. Today, I’m focused on building secure, scalable applications that bring impactful results to businesses and users alike.
+                                    <p className="text-muted" style={{ textAlign: "justify" }}>
+                                         A dedicated Full-Stack Software Engineer with practical experience building real-world web applications using React.js, Node.js, and MongoDB. I have developed secure and scalable platforms including an online cake ordering system (Sweet Delights), a full e-commerce marketplace, and a digital voting platform. I specialize in crafting user-friendly interfaces, implementing secure backend APIs, and managing efficient data flow across the stack. I’m passionate about solving problems, improving user experience, and delivering production-ready software solutions.
                                     </p>
 
                                 </div>

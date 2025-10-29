@@ -20,7 +20,7 @@ const Narbar = () => {
             <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top py-3">
                 <div className="container px-2 px-sm-5">
                     <a className="navbar-brand" onClick={NarbarBtn}>
-                        <span className="fw-bolder text-primary fs-2" style={{ cursor: "pointer" }}>Tescode</span>
+                        <span className="fw-bolder text-gradient fs-2" style={{ cursor: "pointer" }}>Tescode</span>
                     </a>
                     <button
                         className="navbar-toggler"
