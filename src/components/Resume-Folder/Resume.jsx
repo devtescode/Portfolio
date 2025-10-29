@@ -19,13 +19,13 @@ const Resume = () => {
                             {/* Experience Section*/}
                             <section>
                                 <div className="d-flex align-items-center justify-content-between mb-4">
-                                    <h2 className="text-primary fw-bolder mb-0">Experience</h2>
+                                    <h2 className="text-gradient fw-bolder mb-0">Experience</h2>
                                     {/* Download resume button*/}
                                     {/* Note: Set the link href target to a PDF file within your project*/}
-                                    <a className="btn btn-primary px-4 py-3" href="/Teslim%20Professional%20CV%20Resume.pdf" download="Teslim_Resume.pdf">
+                                    <button className="btn btn-primary px-4 py-3" href="/Teslim%20Professional%20CV%20Resume.pdf" download="Teslim_Resume.pdf">
                                         <div className="d-inline-block bi bi-download me-2" />
                                         Download Resume
-                                    </a>
+                                    </button>
                                 </div>
                                 {/* Experience Card 1*/}
                                 <div className="card shadow border-0 rounded-4 mb-5">
@@ -74,14 +74,14 @@ const Resume = () => {
                             </section>
                             {/* Education Section*/}
                             <section>
-                                <h2 className="text-secondary fw-bolder mb-4">Education</h2>
+                                <h2 className="text-gradient fw-bolder mb-4">Education</h2>
                                 {/* Education Card 1*/}
                                 <div className="card shadow border-0 rounded-4 mb-5">
                                     <div className="card-body p-5">
                                         <div className="row align-items-center gx-5">
                                             <div className="col text-center text-lg-start mb-4 mb-lg-0">
                                                 <div className="bg-light p-4 rounded-4">
-                                                    <div className="text-secondary fw-bolder mb-2">
+                                                    <div className="text-gradient fw-bolder mb-2">
                                                         2022 - 2024
                                                     </div>
                                                     <div className="mb-2">
