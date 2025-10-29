@@ -37,13 +37,13 @@ const Resume = () => {
                                                         2025 - Present
                                                     </div>
                                                     <div className="small fw-bolder">Web Developer</div>
-                                                    <div className="small text-muted">SQI College Of ICT</div>
-                                                    <div className="small text-muted">Ogbomosho, Nigeria </div>
+                                                    <div className="small text-muted">Sweet Delights (Cake Ordering Platform)</div>
+                                                    <div className="small text-muted">UK</div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
-                                                    As a Web Developer at SQI College of ICT, I design, develop, and maintain responsive websites and web applications. I utilize front-end and back-end technologies to create efficient, user-friendly solutions that meet both internal and client needs.
+                                                    Web Developer at Sweet Delights, where I built a full-stack cake ordering and delivery platform. I implemented user authentication, product browsing, cart and checkout functionality, payment integration, and an order history system. I focused on responsive UI/UX, smooth navigation, and real-time interaction between users and the platform.
                                                 </div>
                                             </div>
                                         </div>
@@ -58,14 +58,14 @@ const Resume = () => {
                                                     <div className="text-primary fw-bolder mb-2">
                                                         2023 - 2024
                                                     </div>
-                                                    <div className="small fw-bolder">Lautech ICT</div>
+                                                    <div className="small fw-bolder">CivicChoice (Online Voting Platform)</div>
                                                     <div className="small text-muted"></div>
                                                     <div className="small text-muted">Ogbomosho, Nigeria</div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
-                                                    During my SIWES internship at LAUTECH, I gained hands-on experience in web development, contributing to various projects. I collaborated with teams to design and implement user-friendly websites and applications. This role enhanced my skills in front-end and back-end development, as well as problem-solving and teamwork in a professional setting.
+                                                   Built CivicChoice, a secure web-based voting platform featuring real-time vote counting, authentication, and role-based access (admin/voter), designed with a responsive React frontend and a Node.js backend integrated with a database for seamless election management.
                                                 </div>
                                             </div>
                                         </div>
@@ -96,14 +96,14 @@ const Resume = () => {
                                             </div>
                                             <div className="col-lg-8" style={{textAlign:"justify"}}>
                                                 <div>
-                                                    SQI College of ICT, located in Ogbomosho, Nigeria, is a leading institution offering quality education in Information and Communication Technology. It equips students with practical skills in software development, web development, and networking, preparing them for successful careers in the rapidly growing tech industry. The college fosters innovation and technical expertise in a dynamic learning environment.
+                                                    SQI College of ICT is a leading tech institution in Ogbomosho, Nigeria, where I gained practical experience in modern web development. The institution focuses on hands-on learning, equipping students with real-world skills in building responsive and user-oriented web applications.
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 {/* Education Card 2*/}
-                                <div className="card shadow border-0 rounded-4 mb-5">
+                                {/* <div className="card shadow border-0 rounded-4 mb-5">
                                     <div className="card-body p-5">
                                         <div className="row align-items-center gx-5">
                                             <div className="col text-center text-lg-start mb-4 mb-lg-0">
@@ -128,7 +128,7 @@ const Resume = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </section>
                             
                             <section>
@@ -216,7 +216,7 @@ const Resume = () => {
                                                 </div>
                                                 <div className="col mb-4 mb-md-0">
                                                     <div className="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                        Vue
+                                                        Tailwind CSS
                                                     </div>
                                                 </div>
                                                 <div className="col">
@@ -234,7 +234,7 @@ const Resume = () => {
                                                 </div>
                                                 <div className="col mb-4 mb-md-0">
                                                     <div className="d-flex align-items-center bg-light rounded-4 p-3 h-100">
-                                                        React
+                                                        React.js
                                                     </div>
                                                 </div>
                                                 <div className="col">
