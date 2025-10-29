@@ -40,7 +40,7 @@ const Portfolio = () => {
                                             textAlign: "center"
                                         }}
                                     >
-                                        <span className="text-gradient d-inline">
+                                        <span className="text-gradient d-inline"  style={{ textAlign: "justify" }}>
                                             I create clean, scalable, and high-performing websites that help brands launch and grow online.
                                         </span>
                                     </h1>
