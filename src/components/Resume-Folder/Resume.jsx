@@ -2,13 +2,22 @@ import React from 'react'
 import Narbar from '../Navbar-folder/Narbar'
 
 const Resume = () => {
+    const handleDownload = () => {
+        const fileUrl = "/teslimagboola_resume.pdf";
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.setAttribute("download", "teslimagboola_resume.pdf");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <>
             <main className="flex-shrink-0">
                 <div>
-                    <Narbar/>
-                </div>                
-                <div className="container" style={{marginTop:"85x "}}>
+                    <Narbar />
+                </div>
+                <div className="container" style={{ marginTop: "85x " }}>
                     <div className="text-center mb-5">
                         <h1 className="display-5 fw-bolder mb-0">
                             <span className="text-gradient d-inline">Resume</span>
@@ -22,8 +31,11 @@ const Resume = () => {
                                     <h2 className="text-gradient fw-bolder mb-0">Experience</h2>
                                     {/* Download resume button*/}
                                     {/* Note: Set the link href target to a PDF file within your project*/}
-                                    <button className="btn btn-primary px-4 py-3" href="/Teslim%20Professional%20CV%20Resume.pdf" download="Teslim_Resume.pdf">
-                                        <div className="d-inline-block bi bi-download me-2" />
+                                    <button
+                                        className="btn btn-primary px-4 py-3"
+                                        onClick={handleDownload}
+                                    >
+                                        <i className="bi bi-download me-2"></i>
                                         Download Resume
                                     </button>
                                 </div>
@@ -41,7 +53,7 @@ const Resume = () => {
                                                     <div className="small text-muted">UK</div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
+                                            <div className="col-lg-8" style={{ textAlign: "justify" }}>
                                                 <div>
                                                     Web Developer at Sweet Delights, where I built a full-stack cake ordering and delivery platform. I implemented user authentication, product browsing, cart and checkout functionality, payment integration, and an order history system. I focused on responsive UI/UX, smooth navigation, and real-time interaction between users and the platform.
                                                 </div>
@@ -63,9 +75,9 @@ const Resume = () => {
                                                     <div className="small text-muted">Ogbomosho, Nigeria</div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
+                                            <div className="col-lg-8" style={{ textAlign: "justify" }}>
                                                 <div>
-                                                   Built CivicChoice, a secure web-based voting platform featuring real-time vote counting, authentication, and role-based access (admin/voter), designed with a responsive React frontend and a Node.js backend integrated with a database for seamless election management.
+                                                    Built CivicChoice, a secure web-based voting platform featuring real-time vote counting, authentication, and role-based access (admin/voter), designed with a responsive React frontend and a Node.js backend integrated with a database for seamless election management.
                                                 </div>
                                             </div>
                                         </div>
@@ -94,7 +106,7 @@ const Resume = () => {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-8" style={{textAlign:"justify"}}>
+                                            <div className="col-lg-8" style={{ textAlign: "justify" }}>
                                                 <div>
                                                     SQI College of ICT is a leading tech institution in Ogbomosho, Nigeria, where I gained practical experience in modern web development. The institution focuses on hands-on learning, equipping students with real-world skills in building responsive and user-oriented web applications.
                                                 </div>
@@ -130,7 +142,7 @@ const Resume = () => {
                                     </div>
                                 </div> */}
                             </section>
-                            
+
                             <section>
                                 <div className="card border-0 rounded-4 mb-5 shadow-lg">
                                     <div className="card-body ">
