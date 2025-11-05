@@ -35,7 +35,6 @@ const Resume = () => {
                                         className="btn btn-primary px-4 py-3"
                                         onClick={handleDownload}
                                     >
-                                        <i className="bi bi-download me-2"></i>
                                         Download Resume
                                     </button>
                                 </div>
